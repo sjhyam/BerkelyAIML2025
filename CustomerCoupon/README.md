@@ -58,11 +58,51 @@ Visualizations (generated in `coupon_analysis.ipynb`) highlight differences: Sub
 
 These patterns (e.g., youth/social skew) align with survey context (e.g., passengers, time/weather minimal impact). Further steps: Logistic regression for prediction; expand to other coupon types.
 
+## Pre Requisites
+# Customer Coupon Analysis Notebook
+
+This Jupyter notebook demonstrates a basic machine learning pipeline for predicting customer coupon redemption using logistic regression on a sample dataset.
+
+## Prerequisites
+- Python 3.8+ (tested with 3.10)
+- Jupyter Notebook or JupyterLab
+- Git (for cloning the repo)
+
 ## Setup Instructions
-1. Clone the repo: `git clone https://github.com/sjhyam/BerkelyAIML2025.git CustomerCoupon'
-2. Install dependencies: `pip install pandas seaborn matplotlib`
-3. Run the notebook: `jupyter notebook coupon_analysis.ipynb`
-4. View plots: Generated PNGs saved in `/images/`.
+1. **Clone the Repository**:
+git clone https://github.com/sjhyam/BerkelyAIML2025.git
+cd BerkelyAIML2025/CustomerCoupon
+
+2. **Create a Virtual Environment** (recommended)
+python -m venv coupon_env
+source coupon_env/bin/activate  # On Windows: coupon_env\Scripts\activate
+
+3. **Install Dependencies**:
+The notebook requires common data science libraries. Install them via pip:
+pip install matplotlib seaborn pandas numpy scikit-learn jupyter
+*Note*: If you're in a Jupyter environment without terminal access, run this in a notebook cell:
+```python
+!pip install matplotlib seaborn pandas numpy scikit-learn
+
+4. **Download/Verify Data:**
+Ensure data/coupons.csv is present in the data/ folder. If missing, create the folder with os.makedirs('data', exist_ok=True) in the notebook or download from here.
+
+5. **Launch Jupyter:**
+Open module51_coupon_prompt_sm.ipynb in your browser.
+
+Running the Notebook
+
+Execute cells sequentially. Key sections:
+
+Data Loading: Loads coupons.csv and handles any missing files.
+EDA: Visualizations with matplotlib/seaborn (e.g., distributions, correlations).
+Modeling: Trains a logistic regression model with train-test split.
+Evaluation: Accuracy, confusion matrix, and feature importance.
+
+
+Restart the kernel if you encounter import errors after installations.
+
+View plots: Generated PNGs saved in `/images/`.
 
 ## License
 MIT License. See [LICENSE](LICENSE) for details.
