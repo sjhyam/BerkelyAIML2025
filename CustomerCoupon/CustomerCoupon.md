@@ -73,7 +73,7 @@ This Jupyter notebook implements a simple machine learning pipeline to predict c
 - **Visualizations**: Distributions, correlations, and confusion matrix via matplotlib/seaborn.
 
 ## Prerequisites
-- Python 3.8+ (tested with 3.10)
+- Python 3.13.0
 - Jupyter Notebook/Lab
 - Git
 
@@ -114,13 +114,6 @@ This Jupyter notebook implements a simple machine learning pipeline to predict c
 | FileNotFoundError for `coupons.csv` | Verify `data/` folder exists and file is downloaded. |
 | Conda users | Use `conda install -c conda-forge matplotlib seaborn scikit-learn pandas numpy`. |
 | Plot not displaying | Add `%matplotlib inline` after imports. |
-
-## Next Steps/Extensions
-- Try other models (e.g., Random Forest via `sklearn.ensemble`).
-- Add hyperparameter tuning with GridSearchCV.
-- Deploy as a Streamlit app for predictions.
-
-Questions? Open an issue!
 
 ---
 
